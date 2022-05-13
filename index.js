@@ -14,6 +14,11 @@ app.get('/',(req,res)=>{
     res.send("Hello world");
 });
 
+app.get('/users',(req,res)=>{
+console.log("users");
+res.send("user page");
+});
+
 app.listen(port,()=>{
     console.log("setup done");
 })
