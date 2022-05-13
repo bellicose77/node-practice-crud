@@ -19,7 +19,7 @@ app.get('/users',(req,res)=>{
 res.send(users);
 });
 app.get('/users/:id',(req,res)=>{
-    
+    res.send('single user page');
 })
 
 app.listen(port,()=>{
