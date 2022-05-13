@@ -15,6 +15,8 @@ app.get('/',(req,res)=>{
 });
 
 app.get('/users',(req,res)=>{
+    const search = req.query.search;
+    console.log(search);
 //console.log("users");
 res.send(users);
 });
