@@ -16,9 +16,14 @@ app.get('/',(req,res)=>{
 
 app.get('/users',(req,res)=>{
     const search = req.query.search;
-    console.log(search);
-//console.log("users");
-res.send(users);
+    if(search){
+          const searchResult = users.filter(user => user.toLowerCase().inclueds(search))
+          res.send(searchResult)
+    }
+    else{
+        res.send(users);
+    }
+
 });
 app.get('/users/:id',(req,res)=>{
     const id = req.params.id;
