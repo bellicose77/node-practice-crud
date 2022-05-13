@@ -19,7 +19,9 @@ app.get('/users',(req,res)=>{
 res.send(users);
 });
 app.get('/users/:id',(req,res)=>{
-    res.send('single user page');
+    const id = req.params.id;
+    const user = users[id];
+    res.send(user);
 })
 
 app.listen(port,()=>{
