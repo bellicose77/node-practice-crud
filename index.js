@@ -1,7 +1,9 @@
 const express = require('express');
 const cors = require('cors');
+const { json } = require('express/lib/response');
 const app = express();
 app.use(cors());
+app.use(express.json())
 const port = 5000;
 
 const users = [
@@ -35,7 +37,10 @@ app.get('/users/:id',(req,res)=>{
 
 app.post('/users',(req,res)=>{
     const user = req.body;
-    console.log(user);
+     user.id = users.length();
+     user.email = "nothing@gmail.com";
+     users.push(user);
+     res.json(user);
 })
 
 app.listen(port,()=>{
