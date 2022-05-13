@@ -15,9 +15,12 @@ app.get('/',(req,res)=>{
 });
 
 app.get('/users',(req,res)=>{
-console.log("users");
-res.send("user page");
+//console.log("users");
+res.send(users);
 });
+app.get('/users/:id',(req,res)=>{
+    
+})
 
 app.listen(port,()=>{
     console.log("setup done");
