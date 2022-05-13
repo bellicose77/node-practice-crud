@@ -34,7 +34,7 @@ app.get('/users/:id',(req,res)=>{
 });
 
 app.post('/users',(req,res)=>{
-    console.log("post hitted")
+    console.log("post hitted");
 })
 
 app.listen(port,()=>{
