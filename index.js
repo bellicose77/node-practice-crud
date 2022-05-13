@@ -37,9 +37,9 @@ app.get('/users/:id',(req,res)=>{
 
 app.post('/users',(req,res)=>{
     const user = req.body;
-     user.id = users.length();
+     user.id = users.length;
      user.email = "nothing@gmail.com";
-     users.push(user);
+     //users.push(user);
      res.json(user);
 })
 
